@@ -1,34 +1,61 @@
-// Calling showTime function at every second
-setInterval(showTime, 1000);
- 
-// Defining showTime funcion
-function showTime() {
-    // Getting current time and date
-    let time = new Date();
-    let hour = time.getHours();
-    let min = time.getMinutes();
-    let sec = time.getSeconds();
-    am_pm = "";
- 
 
- 
-    hour =
-        hour < 10 ? "0" + hour : hour;
-    min = min < 10 ? "0" + min : min;
-    sec = sec < 10 ? "0" + sec : sec;
- 
-    let currentTime =
-        hour +
-        ":" +
-        min +
-        ":" +
-        sec +
-        am_pm;
- 
-    // Displaying the time
-    document.getElementById(
-        "clock"
-    ).innerHTML = currentTime;
+let nutPosition;
+let canSelect = true;
+const messageElement = document.getElementById('message');
+
+function selectCup(selectedCup) {
+    if (!canSelect) return;
+
+    const winningCup = document.getElementById(`cup${nutPosition}`);
+    const selectedCupElement = document.getElementById(`cup${selectedCup}`);
+
+    canSelect = false;
+
+    winningCup.classList.add('revealed');
+    
+    setTimeout(() => {
+        if (selectedCup === nutPosition) {
+            showMessage("Apsveicu! Jus atradāt riekstu!");
+            winningCup.innerHTML = '<img src="rieksts.png" alt="Nut">';
+        } else {
+            showMessage("Piedodiet, jus neatradāt riekstu!");
+            canSelect = true;
+        }
+    }, 1000);
 }
- 
-showTime();
+
+function resetGame() {
+    const cups = document.querySelectorAll('.cup');
+    cups.forEach(cup => {
+        cup.classList.remove('revealed');
+        cup.innerHTML = '<img src="kruze.png" alt="Cup">';
+    });
+    nutPosition = Math.floor(Math.random() * 3) + 1;
+    showMessage("");
+}
+
+function showMessage(message) {
+    messageElement.textContent = message;
+}
+resetGame();
+const cups = document.querySelectorAll('.cup');
+cups.forEach(cup => {
+    cup.addEventListener('click', () => {
+        if (canSelect) {
+            resetGame();
+        }
+    });
+});
+
+
+
+
+
+function updateTime() {
+    const time = Date.now();
+    const date = new Date(time);
+    const currentDate = date.toString();
+    document.getElementById("currentDate").innerHTML = "" + currentDate;
+  }
+  setInterval(updateTime, 1000);
+  updateTime();

@@ -11,34 +11,52 @@
 
 <body>
 
+
+<header class="p-3 text-bg-dark">
   <div class="container">
-    <header class="d-flex justify-content-center py-3">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="lapa1.html" class="btn btn-outline-primary">Lapa 1</a></li>
-        <li class="nav-item"><a href="lapa2.html" class="nav-link active" aria-current="page">Lapa 2</a></li>
-      </ul>
-    </header>
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+    </div>
   </div>
+</header>
 
 
-  <h1>Spēle</h1>
+
+<h1>Atrodi riekstu</h1>
 
 
-  <div id="clock">8:10:45</div>
- 
-  <script src="clock2.js"></script>
+
+<div class="container">
+  <div class="cup" id="cup1" onclick="selectCup(1)"><img src="kruze.png" alt="Cup"></div>
+  <div class="cup" id="cup2" onclick="selectCup(2)"><img src="kruze.png" alt="Cup"></div>
+  <div class="cup" id="cup3" onclick="selectCup(3)"><img src="kruze.png" alt="Cup"></div>
+</div>
+<div id="message"></div>
 
 
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Projekts</span>
-      </div>
-    </footer>
-  </div>
+
+<div class="container">
+  <header class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="lapa1.html" class="btn btn-outline-primary">Lapa 1</a></li>
+      <li class="nav-item"><a href="lapa2.html" class="nav-link active" aria-current="page">Lapa 2</a></li>
+    </ul>
+  </header>
+</div>
+
+
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+    <ul class="nav col-md-4 justify-content-end">
+      <p id="currentDate" class="laiks"></p>
+    </ul>
+  </footer>
+</div>
+
 
 
   <script src="index2.js"></script>

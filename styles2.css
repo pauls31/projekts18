@@ -1,3 +1,25 @@
+
 h1 {
     text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cup {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.cup img {
+    width: 100px;
+}
+
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
 }
