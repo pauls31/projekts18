@@ -22,50 +22,51 @@
 </header>
 
 
-<h1>Tapešu kalkulators</h1>
 
+<br>
+<h1>Tapešu kalkulators</h1>
+<br>
 
 
 
 <div class="tapete">
   <div class="nosaukums">Augstums sienai:</div>
   <div class="kastes">
-    <input id="height" class="izmers" type="text" placeholder="cm" aria-label="cm">
+    <input id="aug" class="izmers" type="text" placeholder="cm">
   </div>
   <div class="nosaukums">Platums 1 sienai:</div>
   <div class="kastes">
-    <input id="width1" class="izmers" type="text" placeholder="cm" aria-label="cm">
+    <input id="s1" class="izmers" type="text" placeholder="cm">
   </div>
   <div class="nosaukums">Platums 2 sienai:</div>
   <div class="kastes">
-    <input id="width2" class="izmers" type="text" placeholder="cm" aria-label="cm">
+    <input id="s2" class="izmers" type="text" placeholder="cm">
   </div>
   <div class="nosaukums">Platums 3 sienai:</div>
   <div class="kastes">
-    <input id="width3" class="izmers" type="text" placeholder="cm" aria-label="cm">
+    <input id="s3" class="izmers" type="text" placeholder="cm">
   </div>
   <div class="nosaukums">Platums 4 sienai:</div>
   <div class="kastes">
-    <input id="width4" class="izmers" type="text" placeholder="cm" aria-label="cm">
+    <input id="s4" class="izmers" type="text" placeholder="cm">
   </div>
   <div class="nosaukums">Ruļļa platums:</div>
   <div class="kastes">
-    <input id="rollWidth" class="izmers" type="text" placeholder="cm" aria-label="cm">
+    <input id="rp" class="izmers" type="text" placeholder="cm">
   </div>
   <div class="nosaukums">Ruļļa augstums:</div>
   <div class="kastes">
-    <input id="rollHeight" class="izmers" type="text" placeholder="cm" aria-label="cm">
+    <input id="ra" class="izmers" type="text" placeholder="cm">
   </div>
   <div class="nosaukums">Cena par 1 rulli:</div>
   <div class="kastes">
-    <input id="rollPrice" class="izmers" type="text" placeholder="EUR" aria-label="EUR">
+    <input id="rc" class="izmers" type="text" placeholder="EUR">
   </div>
 
-  <div style="text-align: center;"><input id="calcWpEst" class="btn btn--bg" type="submit" value="Aprēķināt" style="margin: 20px 0px;"></div>
+  <div style="text-align: center;"><button type="button" id="apr" class="btn btn-secondary">Aprēķināt</button></div>
   <div style="width: 100%; min-height: 40px; text-align: center;"><span id="atbilde"></span></div>
-  <p style="text-align: center;">Piezīme: izmērus un cenu rakstas noapaļojot uz augšu!</p>
+  <p style="text-align: center;">Piezīme: izmērus un cenu rakstiet noapaļojot uz augšu!</p>
 </div>
-
 
 
 
@@ -78,7 +79,10 @@
   </header>
 </div>
 
-
+<br>
+<br>
+<br>
+<br>
 
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

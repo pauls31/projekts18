@@ -1,13 +1,13 @@
 
-document.getElementById('calcWpEst').addEventListener('click', function() {
-  var height = parseFloat(document.getElementById('height').value);
-  var width1 = parseFloat(document.getElementById('width1').value);
-  var width2 = parseFloat(document.getElementById('width2').value);
-  var width3 = parseFloat(document.getElementById('width3').value);
-  var width4 = parseFloat(document.getElementById('width4').value);
-  var rollWidth = parseFloat(document.getElementById('rollWidth').value);
-  var rollHeight = parseFloat(document.getElementById('rollHeight').value);
-  var rollPrice = parseFloat(document.getElementById('rollPrice').value);
+document.getElementById('apr').addEventListener('click', function() {
+  var height = parseFloat(document.getElementById('aug').value);
+  var width1 = parseFloat(document.getElementById('s1').value);
+  var width2 = parseFloat(document.getElementById('s2').value);
+  var width3 = parseFloat(document.getElementById('s3').value);
+  var width4 = parseFloat(document.getElementById('s4').value);
+  var rollWidth = parseFloat(document.getElementById('rp').value);
+  var rollHeight = parseFloat(document.getElementById('ra').value);
+  var rollPrice = parseFloat(document.getElementById('rc').value);
 
   var totalArea = height * (width1 + width2 + width3 + width4);
   var rollArea = rollWidth * rollHeight;
